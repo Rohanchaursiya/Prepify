@@ -1,0 +1,130 @@
+.syllabus-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3ebff 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 2rem;
+}
+
+/* Keep the same app-name and brand-box styles from StudyOptionsPage.css */
+
+.syllabus-header {
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 3rem;
+  width: 90%;
+  max-width: 800px;
+}
+
+.syllabus-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.syllabus-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.syllabus-content {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  gap: 3rem;
+}
+
+.syllabus-chapters {
+  flex: 1;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.syllabus-chapters h2 {
+  color: #4b6cb7;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.syllabus-chapters ul {
+  list-style: none;
+  padding: 0;
+}
+
+.syllabus-chapters li {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #4b6cb7;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.syllabus-progress {
+  width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.syllabus-progress h2 {
+  color: #4b6cb7;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e0e3e7;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4b6cb7, #1d976c);
+  border-radius: 5px;
+}
+
+.back-button {
+  margin-top: 3rem;
+  background: #4b6cb7;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(75, 108, 183, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .syllabus-content {
+    flex-direction: column;
+  }
+  
+  .syllabus-progress {
+    width: 100%;
+  }
+  
+  .syllabus-header h1 {
+    font-size: 2rem;
+  }
+}
