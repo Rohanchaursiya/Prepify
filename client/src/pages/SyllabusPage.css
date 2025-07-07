@@ -1,0 +1,52 @@
+.syllabus-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3ebff 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 2rem;
+}
+
+.syllabus-header {
+  text-align: center;
+  margin-top: 0; /* Changed from 15vh */
+  margin-bottom: 3rem;
+  width: 90%;
+  max-width: 800px;
+}
+/* ... rest of the styles are unchanged from the previous correct version ... */
+.syllabus-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.syllabus-header p { font-size: 1.2rem; color: #7f8c8d; }
+.syllabus-main-content { display: flex; width: 90%; max-width: 1200px; gap: 2rem; }
+.syllabus-chapters { flex: 3; display: flex; flex-direction: column; gap: 1rem; }
+.unit-card { background: white; border-radius: 1rem; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); overflow: hidden; }
+.unit-header { padding: 1rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f0f0f0; transition: background-color 0.2s; }
+.unit-header h3 { color: #4b6cb7; font-size: 1.3rem; margin: 0; }
+.unit-header span { font-size: 1rem; color: #4b6cb7; }
+.unit-content { padding: 0 1.5rem 1.5rem 1.5rem; background-color: #fdfdff; }
+.topic-group h4 { color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e3ebff; }
+.topic-group ul { list-style: none; padding: 0; margin: 0; }
+.subtopic-item { padding: 0.5rem 0; }
+.subtopic-item label { display: flex; align-items: center; cursor: pointer; font-size: 1rem; color: #34495e; }
+.subtopic-item input[type="checkbox"] { margin-right: 0.8rem; width: 18px; height: 18px; cursor: pointer; accent-color: #4b6cb7; }
+.syllabus-progress { flex: 1; background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); height: fit-content; position: sticky; top: 15vh; }
+.syllabus-progress h2 { color: #4b6cb7; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.8rem; text-align: center; }
+.progress-bar { width: 100%; height: 12px; background: #e0e3e7; border-radius: 6px; margin-bottom: 1rem; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #4b6cb7, #1d976c); border-radius: 6px; }
+.syllabus-progress p { text-align: center; font-size: 1.1rem; color: #2c3e50; margin: 0.5rem 0; }
+.progress-details { font-size: 0.9rem !important; color: #7f8c8d !important; }
+@media (max-width: 992px) {
+  .syllabus-main-content { flex-direction: column-reverse; }
+  .syllabus-progress { width: 100%; box-sizing: border-box; position: static; }
+  .syllabus-header h1 { font-size: 2rem; }
+}

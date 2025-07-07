@@ -1,0 +1,129 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e3ebff 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-section {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 0; /* Adjusted for back button */
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.instruction-text {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.subject-select {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.selected-subject {
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border: 2px solid #e0e3e7;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.selected-subject:hover {
+  border-color: #4b6cb7;
+}
+
+.subject-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #e0e3e7;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.subject-option {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: all 0.2s ease;
+}
+
+.subject-option:hover {
+  background: #f0f4ff;
+  color: #4b6cb7;
+}
+
+.selected-display {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8faff;
+  border-radius: 12px;
+  border: 1px dashed #4b6cb7;
+}
+
+.subject-highlight {
+  font-weight: bold;
+  color: #4b6cb7;
+}
+
+.study-button {
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(75, 108, 183, 0.4);
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  .instruction-text {
+    font-size: 1rem;
+  }
+}

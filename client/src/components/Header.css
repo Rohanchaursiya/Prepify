@@ -1,0 +1,69 @@
+.app-name {
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  width: 100%;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  padding: 10px 20px;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* --- NEW LOGO STYLES --- */
+.brand-box {
+  display: flex;
+  align-items: center;
+  /* REMOVED all properties that created the white box */
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  margin-left: 20px;
+}
+
+.logo-image {
+  height: 50px; /* Control the image size */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.logo-text {
+  font-family: 'Poppins', 'Segoe UI', sans-serif; /* A modern, rounded font */
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 0;
+  /* Use a color from your logo for the text */
+  color: #d1c4e9; /* A light purple from the brain */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.subject-chip {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f0f4ff;
+  color: #182848;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid #c3d4ff;
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 40px;
+  }
+  .logo-text {
+    font-size: 1.8rem;
+  }
+  .subject-chip {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,177 @@
+/* IntroPage.css */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3d4ff 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.app-name {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    padding: 10px 20px;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* --- NEW LOGO STYLES FOR INTRO PAGE --- */
+.brand-box {
+  display: flex;
+  align-items: center;
+  /* REMOVED all properties that created the white box */
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  margin-left: 20px;
+}
+
+/* Re-using the same class names for consistency */
+.logo-image {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 0;
+  color: #d1c4e9; /* Light purple from the brain */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section {
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.flash-card {
+    height: auto;
+    min-height: 30vh;
+    width: 85vw;
+    max-width: 800px;
+    background: white;
+    margin: 2vh auto;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-content h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.features-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.features-list li:before {
+  content: "•";
+  color: #4b6cb7;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.start-button {
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(75, 108, 183, 0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .flash-card {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .features-list {
+    font-size: 1rem;
+  }
+
+  .logo-image {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.8rem;
+  }
+}
