@@ -24,7 +24,7 @@ import dotenv
 load_dotenv()
 
 # --- Configuration ---
-#os.environ['GOOGLE_API_KEY'] = "AIzaSyBmE4atqBo_q6mBFScOl8Pc6JruwQjLNbE"
+os.environ['GOOGLE_API_KEY'] = "AIzaSyBmE4atqBo_q6mBFScOl8Pc6JruwQjLNbE"
 gemini_api_key = os.environ.get('GOOGLE_API_KEY')
 if not gemini_api_key:
     raise ValueError("GOOGLE_API_KEY environment variable not set.")
