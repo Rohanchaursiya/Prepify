@@ -25,20 +25,31 @@
     align-items: center;
 }
 
+/* --- NEW LOGO STYLES FOR INTRO PAGE --- */
 .brand-box {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 50px;
-  min-width: 120px;
-  background: white;
-  color: #4b6cb7;
-  padding: 0 20px;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* REMOVED all properties that created the white box */
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
   margin-left: 20px;
+}
+
+/* Re-using the same class names for consistency */
+.logo-image {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 0;
+  color: #d1c4e9; /* Light purple from the brain */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section {
@@ -142,23 +153,25 @@
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem;
   }
-  
+
   .flash-card {
     width: 90vw;
     padding: 1.5rem;
   }
-  
+
   .features-list {
     font-size: 1rem;
   }
-  
-  .brand-box {
+
+  .logo-image {
     height: 40px;
-    min-width: 100px;
-    font-size: 1.2rem;
+  }
+
+  .logo-text {
+    font-size: 1.8rem;
   }
 }

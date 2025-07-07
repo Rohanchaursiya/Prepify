@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
 import { motion } from "framer-motion";
+import logoImage from '/logo.png'; // Import the logo image
 
 function Intro() {
   const navigate = useNavigate();
@@ -14,11 +15,13 @@ function Intro() {
       <div className="app-name">
         <motion.div
           className="brand-box"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h3>Prepify</h3>
+          {/* Add the image and styled text here */ }
+          <img src={logoImage} alt="Prepify Logo" className="logo-image" />
+          <h3 className="logo-text">Prepify</h3>
         </motion.div>
       </div>
 

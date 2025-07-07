@@ -1,31 +1,30 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './FeatureComingSoon.css';
+import Header from '../components/Header';
 
 function DoubtBoxPage() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { subject } = location.state || {};
 
   return (
     <div className="feature-coming-container">
-      <div className='app-name'>
-        <motion.div 
-          className='brand-box'
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h3>Prepify</h3>
-        </motion.div>
-      </div>
+      <Header subject={subject} />
+
+      <motion.button
+        className="page-back-button"
+        onClick={() => navigate('/study-options', { state: { subject } })}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        whileHover={{ scale: 1.1 }}
+      >
+        ←
+      </motion.button>
 
       <div className="coming-soon-content">
-        <motion.div
-          className="coming-soon-card"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <motion.div className="coming-soon-card" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }}>
           <div className="icon-container" style={{ backgroundColor: '#eb575720' }}>
             <span className="feature-icon">❓</span>
           </div>
@@ -34,14 +33,6 @@ function DoubtBoxPage() {
           <p className="feature-description">
             Get your questions answered by experts and see solutions to common problems.
           </p>
-          <motion.button
-            className="back-button"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => window.history.back()}
-          >
-            ← Back to Options
-          </motion.button>
         </motion.div>
       </div>
     </div>
